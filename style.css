@@ -1,0 +1,74 @@
+/* This is a comment */
+
+* {
+    text-align: center;
+    font: bold, xx-large, 'Couries', monospace, small-caps;
+}
+
+hr {
+    width: 50%;
+}
+
+h2, p {
+    font-style: italic;
+    color: blue;
+    font-variant: small-caps;
+    border: 10px, solid;
+    text-decoration: underline;
+}
+
+.orange {
+    color: orange;
+}
+
+.eggplant {
+    background-color: rgb(52%, 20%, 45%);
+}
+
+.white {
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.orange-background {
+    background-color: orange;
+}
+
+.black {
+    color: black;
+}
+
+#Obama-Quote {
+    background-color: yellow;
+    color: crimson;
+    border-style: dotted;
+    border-color: blue;
+    border-width: 10px;
+}
+
+q.red {
+    background-color: red;
+    color: black;
+}
+q.blue {
+    background-color: cyan;
+    color: black;
+}
+.bold {
+    font-weight: bold;
+}
+
+.huge-font {
+    font-size: xx-large;
+}
+
+body {
+    font-family: 'Courier', monospace;
+}
