@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Algorithm</title>
+    <style>
+
+        .code-box {
+            border-style: solid;
+            width: max-content;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Bubble Sort Algorithm</h1>
+    <div class="code-box"><pre><code>
+public static void bubbleSort(int[] sort_arr, int len) {
+
+    for (int i=0;i &lt; len-1; ++i) {
+
+        for(int j=0; j &lt; len-i-1; ++j){
+
+            if(sort_arr[j+1] &lt; sort_arr[j]){
+
+                int swap = sort_arr[j];
+                sort_arr[j] = sort_arr[j+1];
+                sort_arr[j+1] = swap;
+
+            }
+        }
+    }
+}
+        </code></pre></div>
+
+        <h4>Example Input:</h4>
+        <div class="code-box">
+            <code>
+                <p>int[] array = {10, 5, 3, 1, 24, 12};</p>
+                <p>int len = array.length;</p>
+                <p>bubbleSort(array, len); </p>
+            </code>
+        </div>
+
+        <h4>Output:</h4>
+        <div class="code-box">
+            <code>
+                <p>[1, 3, 5, 10, 12, 24]</p>
+            </code>
+        </div>
+
+        <p>A Quote from the book <cite>"Java For Beginners"</cite>:</p>
+        <blockquote cite="Java For Beginners">
+            "Bubble sort is a <strong>basic</strong> algorithm for arranging a string of numbers or other elements in the correct order. The method works by examining each set of adjacent elements in the string, from left to right, switching their positions if they are out of order. The algorithm then repeats this process until it can run through the entire string and find no two elements that need to be <i>swapped</i>.
+            If a programmer or analyst wanted to arrange a series of numbers in ascending order, the bubble sort approach would look like the example pictured here.
+            The <mark>algorithm</mark> would review two items at a time, rearrange those not already in ascending order from left to right, and then continue to cycle through the entire sequence until it completed a pass without switching any numbers."
+        </blockquote>
+
+
+        <p>More informations about:</p>
+        <p><abbr title="Secure Shell">SSH</abbr> <a href="#">click here</a></p>
+        
+        <p><b>FUN FACT</b>: The algorithm is called after soap bubbles which rise in the air</p>
+
+    </body>
+</html>
