@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+}
+
+img {
+    width: 500px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+header {
+    background-color: darkslateblue;
+    color: white;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 20px;
+}
+
+aside {
+    float: right;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+}
+
+section h2 {
+    background-color: darkmagenta;
+    color: white;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin: 10px;
+}
+
+body {
+    background-color: bisque;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
