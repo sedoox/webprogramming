@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Serdar Kaan Tuzcu">
     <title>My First Form</title>
+    <script>
+        function generateEmail(form) {
+            document.getElementById("email").innerHTML =
+            form.elements["first"].value + "." +
+            form.elements["last"].value + "@atu.edu";
+            form.reset();
+        }
+    </script>
 </head>
 <body>
     <form>
@@ -12,6 +20,9 @@
         Last Name: <input type="text" id="last" placeholder="Enter your last name" size="15"> <br>
         <input type="button" value="Generate Email" onclick="generateEmail(this.form);">
 
+        <p id="email">
+
+        </p>
     </form>
 </body>
 </html>
