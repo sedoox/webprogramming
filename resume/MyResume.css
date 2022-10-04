@@ -1,0 +1,67 @@
+@font-face {
+    font-family: comic;
+    src: url(Comic-Regular.ttf);
+}
+
+#me {
+    float: right;
+    width: 300px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+#content {
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 70%;
+    hyphens: auto; 
+	text-align: justify
+}
+
+* {
+    font-family: comic;
+}
+
+body {
+    background-color:aliceblue;
+}
+
+p {
+    font-size: large;
+}
+
+footer img {
+    width: 60px;
+    padding: 10px;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+}
+
+#atu, #thm {
+    width: 50px;
+    margin-right: 20px;
+}
+
+#thm {
+    margin-left: 50px;
+}
+
+.university-container {
+    display: flex;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
