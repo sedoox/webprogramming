@@ -3,5 +3,3 @@ function sliceString(str) {
         console.log(str.slice(0, str.length/2))
     }
 }
-
-sliceString("12345678")
