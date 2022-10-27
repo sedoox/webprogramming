@@ -1,0 +1,31 @@
+.table {
+    display: table;
+    border-spacing: 0 3px;
+}
+
+.row {
+    display: table-row;
+}
+
+.row > * {
+    display: table-cell;
+}
+
+.row >:first-child {
+    text-align: right;
+    padding-right: 10px;
+}
+
+table {
+    text-align: center;
+}
+
+th {
+     background-color: midnightblue;
+     color: white;
+     padding: 10px;
+}
+
+td {
+    background-color: mistyrose;
+}

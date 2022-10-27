@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Serdar Kaan Tuzcu">
+    <title>Quadratic Equation Roots Calculator</title>
+    <script src="rootsCalculator.js"></script>
+    <style>
+        input {
+            width: 100px;
+        }
+        input:focus {
+            outline: none;
+        }
+        #btn {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Quadratic Equation Roots Calculator</h2>
+    <p>This web page finds the roots of a polynomial equation of the following form: </p>
+    <p><i>ax<sup>2</sup> + bx + c = 0</p></i>
+    <p><i> a, b,</i> and <i>c</i> must be integers between -99 and +99, and a must be non-zero.</p>
+    <form>
+        <label for="a"><i>a</i></label>
+        <input type="number" id="a" min="-99" max="99" step="1" required onchange="validateInput(this)">
+        <label for="b"><i>b</i></label>
+        <input type="number" id="b" min="-99" max="99" step="1" required onchange="validateInput(this)">
+        <label for="c"><i>c</i></label>
+        <input type="number" id="c" min="-99" max="99" step="1" required onchange="validateInput(this)">
+        <br>
+        <br>
+        <input id="btn" type="button" value="Calculate roots" onclick="calculateRoots(this.form)">
+        <br>
+        <p id="result"></p>
+    </form>
+</body>
+</html>

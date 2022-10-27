@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Serdar Kaan Tuzcu">
+    <title>My First JSON! Yay!</title>
+    <script>
+        let companies1 = [
+            {
+                "name" : "Big Corporation",
+                "numberOfEmployees" : 1000,
+                "CEO" : "Mary",
+                "rating" : 3.6
+            },
+            {
+                "name" : "Small Startup",
+                "numberOfEmployees" : 10,
+                "CEO" : null,
+                "rating" : 4.3
+            }
+        ]
+
+        let companies2 = [
+            {
+                name : "Big Corporation",
+                numberOfEmployees : 1000,
+                CEO : "Mary",
+                rating : 3.6
+            },
+            {
+                name : "Small Startup",
+                numberOfEmployees : 10,
+                CEO : null,
+                rating : 4.3
+            }
+        ]
+
+        /* JSON Object */
+
+        console.log(companies1)
+        console.log(companies1[0].name)
+        console.log(companies1[0].CEO)
+        console.log(companies1[1].name)
+
+        /* JS Object */
+
+        const myObj = JSON.stringify(companies2)
+        console.log(JSON.parse(myObj))
+        console.log(companies2[0].name)
+        console.log(companies2[0].CEO)
+        console.log(companies2[1].name)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

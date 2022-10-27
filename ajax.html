@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Serdar Kaan Tuzcu">
+    <title>My Frist API Call</title>
+</head>
+<body>
+    <button id="countryButton" onclick="showCountries()">Load Country on Click!</button>
+    <script>
+        function showCountries() {
+            let flag = document.createElement('img')
+            let name = document.createElement('p')
+            document.body.appendChild(name)
+            document.body.appendChild(flag)
+           
+            let url = "https://restcountries.com/v2/all"
+            console.log("Let's GO!")
+            fetch(url)
+            .then(response => {
+                return response.json()
+            })
+            .then(json => {
+                console.log(json)
+                let country = json[100]
+                flag.src = country.flag
+                name.innerHTML = country.name
+                console.log("Flag Added!")
+            })
+            .catch(err => {
+                console.log("Errors: " + err.message)
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Serdar Kaan Tuzcu">
+    <title>jService API</title>
+</head>
+<body>
+    <button id="button" onclick="showQuestion()">Give me a question!</button>
+    <script>
+        function showQuestion() {
+            let question = document.createElement('p')
+            let category = document.createElement('p')
+            let airdate = document.createElement('p')
+            let value = document.createElement('p')
+            let button = document.createElement('button')
+            button.id = "buttonAnswer"
+            button.onclick = () => {
+                answer.hidden = false
+            }
+            button.innerHTML = "Show Answer"
+            let answer = document.createElement('p')
+            answer.hidden = true
+            
+            document.body.appendChild(question)
+            document.body.appendChild(category)
+            document.body.appendChild(airdate)
+            document.body.appendChild(value)
+            document.body.appendChild(button)
+            document.body.appendChild(answer)
+            
+            let url = "https://jservice.io/api/clues"
+            console.log("Let's GO!")
+            fetch(url)
+            .then(response => {
+                return response.json()
+            })
+            .then(json => {
+                console.log(json)
+                let questionObject = json[Math.floor(Math.random() * 100)]
+                question.innerHTML = "Question: " + questionObject.question
+                category.innerHTML = "Category: " + questionObject.category.title
+                let date = new Date(questionObject.airdate)
+                airdate.innerHTML = "Airdate: " + date.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) 
+                value.innerHTML = "Value: " + questionObject.value
+                answer.innerHTML = "Answer: " + questionObject.answer
+            })
+            .catch(err => {
+                console.log("Errors: " + err.message)
+            })
+        }
+    </script>
+</body>
+</html>
